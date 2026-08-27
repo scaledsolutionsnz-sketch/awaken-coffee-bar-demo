@@ -523,9 +523,15 @@ section{padding:clamp(58px,9vw,104px) 0;position:relative;}
   color:#5C564A;text-align:center;
 }
 .flight-sticker span b{color:var(--ink);font-weight:700;}
+/* on a phone it stays pinned, just smaller, in the empty band under the nav.
+   dropping it into the flow pushed it below the fold. */
 @media (max-width:900px){
-  .flight-sticker{position:static;transform:rotate(-3deg);width:152px;margin:0 0 22px;}
-  .flight-sticker:hover{transform:rotate(-3deg) translateY(-3px);}
+  .flight-sticker{width:112px;right:16px;top:20px;padding:9px 9px 7px;border-radius:11px;transform:rotate(-4deg);}
+  .flight-sticker span{font-size:9px;margin-top:6px;padding-top:6px;}
+}
+@media (max-width:560px){
+  .flight-sticker{width:92px;right:12px;top:16px;}
+  .flight-sticker span{font-size:8.5px;letter-spacing:.03em;}
 }
 
 .flight-sec{padding:clamp(64px,9vw,110px) 0;}
